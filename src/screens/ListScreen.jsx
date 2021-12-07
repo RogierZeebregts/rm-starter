@@ -3,18 +3,18 @@ import { FlatList, StyleSheet, Text } from 'react-native';
 
 const ListScreen = () => {
     const friends = [
-        { name: 'friend #1' },
-        { name: 'friend #2' },
-        { name: 'friend #3' },
-        { name: 'friend #4' },
-        { name: 'friend #5' },
-        { name: 'friend #6' },
-        { name: 'friend #7' },
-        { name: 'friend #8' },
+        { name: 'friend #1', age: 10 },
+        { name: 'friend #2', age: 10 },
+        { name: 'friend #3', age: 10 },
+        { name: 'friend #4', age: 10 },
+        { name: 'friend #5', age: 10 },
+        { name: 'friend #6', age: 10 },
+        { name: 'friend #7', age: 10 },
+        { name: 'friend #8', age: 10 },
     ]
 
     const Item = ({ item }) => {
-        return <Text>{item.name}</Text>
+        return <Text style={styles.textStyle}>{item.name} - Age: {item.age}</Text>
     }
 
     return <FlatList
@@ -24,6 +24,10 @@ const ListScreen = () => {
     />
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    textStyle: {
+        marginVertical: 50
+    }
+})
 
 export default ListScreen
